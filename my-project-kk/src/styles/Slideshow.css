@@ -1,0 +1,101 @@
+.container {
+    padding: 40px;
+    border-radius: 10px;
+    gap: 20px;
+    display: flex;
+    overflow: hidden; /* Hide overflowing content */
+    width: 90%; /* Default width of the container */
+    max-width: 1900px; /* Limit maximum width */
+    margin: 0 auto; /* Center the container horizontally */
+    position: relative; /* Position relative to allow absolute positioning of wrappers */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow for aesthetics */
+}
+
+.container:hover .wrapper {
+    animation-play-state: paused; /* Pauses the entire slideshow */
+}
+
+.wrapper {
+    display: inline-block; /* Display wrappers inline */
+    width: 100%; /* Make each wrapper the same width as the container */
+    animation: slide 200s linear infinite; /* Run the slide animation */
+}
+
+.wrapper img {
+    width: 15rem; /* Responsive image width */
+    height: 25rem; /* Maintain aspect ratio */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the pop-out effect */
+}
+
+/* Pause and pop out effect on hover */
+.wrapper img:hover {
+    animation-play-state: paused; /* Pauses the entire animation */
+    transform: scale(1.1); /* Scales the image to 110% of its size */
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
+                rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+                rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
+                rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+                rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+                rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+                rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+                rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    5% { transform: translateX(-100%); }
+    10% { transform: translateX(-200%); }
+    15% { transform: translateX(-300%); }
+    20% { transform: translateX(-400%); }
+    25% { transform: translateX(-500%); }
+    30% { transform: translateX(-600%); }
+    35% { transform: translateX(-700%); }
+    40% { transform: translateX(-800%); }
+    45% { transform: translateX(-900%); }
+    50% { transform: translateX(-1000%); }
+    55% { transform: translateX(-1100%); }
+    60% { transform: translateX(-1200%); }
+    65% { transform: translateX(-1300%); }
+    70% { transform: translateX(-1400%); }
+    75% { transform: translateX(-1500%); }
+    80% { transform: translateX(-1600%); }
+    85% { transform: translateX(-1700%); }
+    90% { transform: translateX(-1800%); }
+    95% { transform: translateX(-1900%); }
+    100% { transform: translateX(-2000%); }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%; /* Slightly reduce padding for tablets */
+    }
+    .wrapper img {
+        width: 13rem;
+        height: 22rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+    .wrapper img {
+        width: 10rem;
+        height: 18rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px; /* Minimal padding for very small devices */
+        width: 100%; /* Take the full width of the screen */
+    }
+    .wrapper img {
+        width: 8rem;
+        height: 15rem;
+    }
+}

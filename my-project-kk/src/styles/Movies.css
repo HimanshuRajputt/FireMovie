@@ -1,0 +1,439 @@
+/* General container styling */
+.movies-container {
+  padding: 2rem;
+  background: linear-gradient(135deg, #24243e, #302b63, #0f0c29);
+  color: #fff;
+  min-height: 86.7vh;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  overflow-y: hidden; /* Hides the vertical scrollbar */
+}
+
+/* Heading styling */
+.movies-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffcc29;
+  margin-bottom: 2rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Movies grid styling */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* Individual movie card */
+.movie-card {
+  background: #1e1e2f;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  color: #fff;
+}
+
+.movie-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Movie title */
+.movie-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffa500;
+  margin-bottom: 0.5rem;
+}
+
+/* Movie description */
+.movie-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0.5rem 0;
+  color: #ddd;
+}
+
+/* Movie year */
+.movie-year {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ff6f61;
+  margin-bottom: 1rem;
+}
+
+/* Button container */
+.movie-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  gap: 0.5rem;
+}
+
+/* Button styling */
+.details-button, .delete-button, .Edit-button {
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.Edit-button {
+  background: #28a745;
+  color: #fff;
+}
+
+.Edit-button:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+.details-button {
+  background: #28a745;
+  color: #fff;
+}
+
+.details-button:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+.delete-button {
+  background: #dc3545;
+  color: #fff;
+}
+
+.delete-button:hover {
+  background: #c82333;
+  transform: scale(1.05);
+}
+
+/* Edit Movie input */
+.EditMovie {
+  font-weight: bold;
+  color: #ffa500;
+  padding: 0.5rem;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 90%;
+  height: 2rem;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1.5rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.EditMovie-input {
+  font-weight: bold;
+  color: #ffa500;
+  padding: 0.5rem;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 90%;
+  height: 4rem;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.EditMovie-textarea {
+  font-weight: bold;
+  color: #ffa500;
+  padding: 0.5rem;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 90%;
+  height: 8rem;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.EditMovie:focus {
+  box-shadow: 0 0 8px #28a745;
+}
+
+/* Save Button (✔️) Styles */
+.save-button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #28a745;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.save-button:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+}
+
+.save-button:active {
+  background-color: #1e7e34;
+}
+
+/* Cancel Button (✖️) Styles */
+.cancel-button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background-color: #dc3545;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.cancel-button:hover {
+  background-color: #c82333;
+  transform: scale(1.1);
+}
+
+.cancel-button:active {
+  background-color: #bd2130;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ****************************************************** */
+
+
+.Filter-Aplpha {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allows buttons to wrap to the next line on smaller screens */
+}
+
+.Filter-Aplpha-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1;
+  transition: all 0.2s ease; /* Smooth hover effect */
+}
+
+.Filter-Aplpha-button:hover {
+  background-color: #0e868a;
+  z-index: 100;
+  transform: scale(1.2); /* Slightly reduces scaling for better responsiveness */
+  border-color: #888;
+  transition: all 0.2s ease;
+}
+
+.Filter-Aplpha-button:active {
+  background-color: #1a93da;
+  transform: scale(0.95); /* Slightly reduces size on click */
+}
+
+.Filter-Aplpha-button:focus {
+  outline: none; /* Removes default focus outline */
+  box-shadow: 0 0 4px #007acc; /* Adds a focus shadow for accessibility */
+}
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+  
+} */
+
+/* @media (max-width: 480px) {
+  
+} */
+
+
+.Filter-Aplpha {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allows buttons to wrap to the next line on smaller screens */
+}
+
+.Filter-Aplpha-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1;
+  transition: all 2s ease; /* Adds a smooth hover effect */
+}
+
+.Filter-Aplpha-button:hover {
+  background-color: #0e868a;
+  z-index: 100;
+  scale: 1.4;
+  border-color: #888;
+  transition: all 0.2s ease;
+}
+
+.Filter-Aplpha-button:active {
+  background-color: #1a93da;
+  transform: scale(0.95); /* Slightly reduces size on click */
+}
+
+.Filter-Aplpha-button:focus {
+  outline: none; /* Removes default focus outline */
+  box-shadow: 0 0 4px #007acc; /* Adds a focus shadow for accessibility */
+}
+
+.All-filter-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0px 12%;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+.search-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 250px; /* Ensures the search input doesn't shrink too much */
+}
+
+.search-input {
+  width: 100%;
+  max-width: 100%; /* Allows it to take the available space */
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap; /* Ensures dropdowns wrap on smaller screens */
+  min-width: 250px; /* Ensures dropdowns have a minimum width */
+}
+
+.filter-container select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.filter-container select:hover {
+  background-color: #e8e8e8;
+  border-color: #888;
+}
+
+.filter-container select:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #fff;
+}
+
+.filter-container option {
+  padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .All-filter-container {
+    padding: 0 5%; /* Reduce padding for smaller screens */
+    justify-content: center; /* Center align items on smaller screens */
+  }
+
+  .search-container,
+  .filter-container {
+    flex: 1 1 100%; /* Make each section take full width */
+    justify-content: center; /* Center align elements within each section */
+    margin-bottom: 10px; /* Add spacing between search and filter sections */
+  }
+
+  .search-input {
+    max-width: 90%; /* Reduce input width for better fit on small screens */
+  }
+
+  .filter-container select {
+    max-width: 90%; /* Ensure dropdowns fit within the available space */
+  }
+
+  /* **************** */
+  .Filter-Aplpha {
+    gap: 6px; /* Reduce gap between buttons */
+    margin-bottom: 15px; /* Adjust spacing for smaller screens */
+  }
+
+  .Filter-Aplpha-button {
+    padding: 8px 12px; /* Reduce padding for buttons */
+    font-size: 14px; /* Slightly smaller font size */
+    transform: none; /* Prevent hover scaling on very small screens */
+  }
+
+  .Filter-Aplpha-button:hover {
+    transform: none; /* Disable scaling on hover for better usability */
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input,
+  .filter-container select {
+    font-size: 0.9rem; /* Slightly reduce font size for smaller screens */
+    padding: 0.4rem; /* Adjust padding for smaller screens */
+  }
+
+  .Filter-Aplpha {
+    gap: 4px; /* Further reduce the gap for very small screens */
+  }
+
+  .Filter-Aplpha-button {
+    padding: 6px 10px; /* Compact padding */
+    font-size: 12px; /* Further reduced font size */
+    border-radius: 3px; /* Smaller border radius */
+  }
+
+  .Filter-Aplpha-button:focus {
+    box-shadow: none; /* Simplify focus effect on smaller screens */
+  }
+}

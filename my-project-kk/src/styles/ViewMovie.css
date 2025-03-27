@@ -1,0 +1,195 @@
+/* Body Background */
+body {
+  background: linear-gradient(to bottom, #1e3c72, #2a5298);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  color: #f5f5f5;
+}
+
+/* Container Styling */
+.single-movie-container {
+  padding: 30px;
+  width: 60%;
+  margin: 3% auto;
+  background: linear-gradient(135deg, #ffffff, #80a7c1be);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 1199px) {
+  .single-movie-container {
+   padding: 30px;
+  width: 60%;
+  margin: 10% auto;
+  background: linear-gradient(135deg, #ffffff, #80a7c1be);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+}
+
+
+
+
+.single-movie-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.backButton{
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0);
+  border: none;
+  /* text-align: center; */
+  padding: 8px 12px;
+}
+/* Movie Details */
+.single-movie-details {
+  position: relative;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.single-movie-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  animation: fadeInDown 0.8s ease-in-out;
+}
+
+.single-movie-description {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.single-movie-year {
+  font-size: 1.2rem;
+  color: #16a085;
+  font-weight: bold;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Loading Message */
+.single-loading-message {
+  font-size: 1.5rem;
+  color: #7f8c8d;
+  text-align: center;
+  animation: pulse 1.5s infinite;
+}
+
+
+
+/* Image Styling with Animations */
+.single-movie-URL {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: spinLogo 4s ease;
+  /* animation: zoomIn 0.8s ease-in-out; */
+}
+
+.single-movie-URL:hover {
+
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Animations */
+
+/* Logo Spin Animation */
+@keyframes spinLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.related-movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 60px;
+  margin: 0 auto;
+  margin-right: 60px;
+}
+
+.movie-card {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.movie-card-image {
+  width: 100%; 
+  /* Responsive image width */
+    height: 100%; /* Maintain aspect ratio */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the pop-out effect */
+}

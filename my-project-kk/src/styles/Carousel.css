@@ -1,0 +1,25 @@
+.carousel-container {
+  margin: 20px auto;
+  /* height: 00px; */
+  /* max-width: 800px; */
+}
+
+.carousel-slide {
+  text-align: center;
+  position: relative;
+}
+
+.carousel-image {
+  width: 70%;
+  border-radius: 10px;
+}
+
+.carousel-details {
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  background-color: rgba(0, 0, 0, 0.576);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}

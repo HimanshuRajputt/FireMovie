@@ -1,0 +1,132 @@
+/* Navbar Container */
+.navbar-container {
+  width: 100%;
+  background: linear-gradient(135deg, #1e1e2f, #3a3a5d);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar Layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+  cursor: pointer;
+}
+
+.logo-icon {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  animation: spinLogo 5s infinite  ;
+}
+
+.logo-text {
+  
+  font-family: "Arial", sans-serif;
+  color: #ffcc29;
+}
+
+/* Navigation Links Container */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-link {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hover and Active States */
+.nav-link:hover {
+  background-color: #ffcc29;
+  color: #1e1e2f;
+  border-color: #ffcc29;
+}
+
+.nav-link.active {
+  background-color: #ffcc29;
+  color: #1e1e2f;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-menu:hover {
+  transform: rotate(90deg);
+}
+
+/* Responsive Navigation Links */
+.nav-links.open {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #1e1e2f;
+  width: 100%;
+  padding: 1rem 0;
+  text-align: center;
+  z-index: 100;
+}
+
+.nav-links {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+/* Logo Spin Animation */
+@keyframes spinLogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}

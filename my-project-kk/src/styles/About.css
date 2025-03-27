@@ -1,0 +1,148 @@
+/* General container styling */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1e1e2f, #3b3b5c);
+  color: #fff;
+  min-height: 78vh;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Heading styling */
+.about-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ff6f61;
+  margin-bottom: 1.5rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Description styling */
+.about-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin: 0 15%;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.about-highlight {
+  color: #ffcc29;
+  font-weight: bold;
+}
+
+/* Mission styling */
+.about-mission {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 1rem 0;
+  animation: zoomIn 1s ease-in-out;
+}
+
+/* Values Section */
+.about-values {
+  margin-top: 2rem;
+}
+
+.values-heading {
+  font-size: 1.8rem;
+  color: #ffa500;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.values-list {
+  list-style: none;
+  padding: 0;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.values-item {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.values-item:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Button styling */
+.about-button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: #1e1e2f;
+  background: #ffcc29;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.about-button:hover {
+  background: #ffb81c;
+  transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

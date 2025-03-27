@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* overflow-y: hidden; */
+}
+/* Optional: Hide horizontal scrollbar if needed */
+body::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar for WebKit browsers */
+}
+
+body {
+  -ms-overflow-style: none; /* Hide scrollbar for IE */
+}
